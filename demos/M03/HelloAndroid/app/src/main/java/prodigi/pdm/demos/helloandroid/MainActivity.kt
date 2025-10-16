@@ -25,6 +25,6 @@ class MainActivity : ComponentActivity() {
                     )
                 }
             }
-        }
-    }
-}
+        }   // setContent ends
+    }   // onCreate ends
+}   // class ends
