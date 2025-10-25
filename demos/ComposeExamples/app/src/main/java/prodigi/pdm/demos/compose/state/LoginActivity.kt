@@ -15,6 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.lifecycleScope
 import prodigi.pdm.demos.compose.ui.theme.ComposeExamplesTheme
 
 class LoginActivity : ComponentActivity() {
