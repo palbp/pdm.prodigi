@@ -143,12 +143,10 @@ fun JokeViewsStructure(
             .fillMaxSize()
             .padding(bottom = 16.dp),
         topBar = {
-            if (onBackNavigate != null) {
-                TopBar(
-                    title = stringResource(R.string.jokes_title),
-                    onBackIntent = onBackNavigate
-                )
-            }
+            TopBar(
+                title = stringResource(R.string.jokes_title),
+                onBackIntent = onBackNavigate
+            )
         },
         floatingActionButton = {
             RefreshFab(

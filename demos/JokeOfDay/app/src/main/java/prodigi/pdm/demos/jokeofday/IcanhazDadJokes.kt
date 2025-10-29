@@ -17,7 +17,7 @@ class IcanhazDadJokes(private val client: HttpClient) : JokesService {
     private val source = URL("https://icanhazdadjoke.com/")
 
     override suspend fun fetchJoke(): Joke {
-        delay(timeMillis = 1500) // Simulate network delay
+        delay(timeMillis = 3500) // Simulate network delay
         return client.get(url = source) { header("accept", "application/json") }
             .body<JokeDto>()
             .toJoke(source)

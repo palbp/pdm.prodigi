@@ -39,29 +39,34 @@ class JokeOfDayScreenViewModel(val jokeService: JokesService) : ViewModel() {
         }
     }
 
-    var currentState: JokeOfDayScreenState by mutableStateOf(value = JokeOfDayScreenState.Idle)
+    private var state: JokeOfDayScreenState by mutableStateOf(value = JokeOfDayScreenState.Idle)
+    val currentState: JokeOfDayScreenState
+        get() = state
 
     /**
      * Fetches a new joke from the service and updates the screen state accordingly.
      */
     fun fetchJoke() {
-        if (currentState is JokeOfDayScreenState.Loading) {
+        if (state is JokeOfDayScreenState.Loading) {
             return
         }
 
         viewModelScope.launch {
-            currentState = try {
-                currentState = JokeOfDayScreenState.Loading
-                jokeService.fetchJoke().let { JokeOfDayScreenState.Success(it) }
+            state = try {
+                state = JokeOfDayScreenState.Loading
+                JokeOfDayScreenState.Success(joke = jokeService.fetchJoke())
             } catch (e: Exception) {
                 JokeOfDayScreenState.Error(e)
             }
         }
     }
 
+    /**
+     * Resets the screen state back to idle when in the error state.
+     */
     fun resetToIdle() {
-        if (currentState is JokeOfDayScreenState.Error) {
-            currentState = JokeOfDayScreenState.Idle
+        if (state is JokeOfDayScreenState.Error) {
+            state = JokeOfDayScreenState.Idle
         }
     }
 }
