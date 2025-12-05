@@ -7,10 +7,7 @@ import prodigi.pdm.demos.jokeofday.ui.theme.JokeOfDayTheme
 
 @Composable
 fun JokeOfDayScreen(viewModel: JokeOfDayScreenViewModel, onBackIntent: () -> Unit) {
-
-    val currentState: JokeOfDayScreenState = viewModel.currentState
-
-    when (currentState) {
+    when (val state = viewModel.currentState) {
         is JokeOfDayScreenState.Idle -> IdleView(
             onFetchRequested = { viewModel.fetchJoke() },
             onBackRequested = onBackIntent
@@ -19,7 +16,7 @@ fun JokeOfDayScreen(viewModel: JokeOfDayScreenViewModel, onBackIntent: () -> Uni
         is JokeOfDayScreenState.Loading -> LoadingView()
 
         is JokeOfDayScreenState.Success -> SuccessView(
-            joke = currentState.joke,
+            joke = state.joke,
             onFetchRequested = { viewModel.fetchJoke() },
             onBackRequested = onBackIntent
         )

@@ -47,16 +47,14 @@ class JokeOfDayScreenViewModel(val jokeService: JokesService) : ViewModel() {
      * Fetches a new joke from the service and updates the screen state accordingly.
      */
     fun fetchJoke() {
-        if (state is JokeOfDayScreenState.Loading) {
-            return
-        }
-
-        viewModelScope.launch {
-            state = try {
-                state = JokeOfDayScreenState.Loading
-                JokeOfDayScreenState.Success(joke = jokeService.fetchJoke())
-            } catch (e: Exception) {
-                JokeOfDayScreenState.Error(e)
+        if (state is JokeOfDayScreenState.Idle || state is JokeOfDayScreenState.Success) {
+            viewModelScope.launch {
+                state = try {
+                    state = JokeOfDayScreenState.Loading
+                    JokeOfDayScreenState.Success(joke = jokeService.fetchJoke())
+                } catch (e: Exception) {
+                    JokeOfDayScreenState.Error(e)
+                }
             }
         }
     }
