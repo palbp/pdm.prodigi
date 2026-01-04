@@ -1,7 +1,5 @@
 # 2 - Activity e Navegação Clássica
 
-# 2 - Activity e Navegação Clássica
-
 ### Objectivos da Secção
 
 - Compreender o papel da Activity como hospedeira da interface gráfica, adotando (neste curso) o modelo de uma Activity por ecrã.
