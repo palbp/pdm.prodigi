@@ -13,7 +13,8 @@ Nesta fase o enfoque está na criação da base que define a navegação e a obs
 
 Objetivo pedagógico: observar as consequências da navegação entre activities no seu ciclo de vida através de logging nos callbacks correspondentes.
 
-Guião: [guide.md](guide.md)
+Guião: [guide.md](guide.md)  
+Solução (tag): [challenge_1_solution](https://github.com/palbp/pdm.prodigi/tree/challenge_1_solution)
 
 ### Requisitos
 
