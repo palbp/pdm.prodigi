@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tic-Tac-Toe</string>
+    <string name="main_screen_about_button_text">About</string>
+    <string name="main_screen_play_button_text">Play</string>
+
+    <string name="about_screen_content">About Screen Content</string>
+    <string name="game_screen_content">Game Screen Content</string>
+</resources>
