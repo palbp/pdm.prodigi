@@ -9,7 +9,7 @@
     - Logcat  
   
 3. Em que ferramenta se criam e gerem dispositivos virtuais (emulador)?   
-  - AVD Manager  
-  - SDK Manager  
-  - Device File Explorer  
-  - Profiler  
+    - AVD Manager  
+    - SDK Manager  
+    - Device File Explorer  
+    - Profiler  
