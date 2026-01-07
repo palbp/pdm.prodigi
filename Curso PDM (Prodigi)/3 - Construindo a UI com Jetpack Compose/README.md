@@ -17,7 +17,7 @@
 - Vídeo: [Compose - Layouts](https://youtu.be/IWumBm4olEs?si=f2WQd0MqLbxZVGxW)
 - Slides usados no vídeo: [Compose-Layouts.pdf](/slides/PDM_06_Compose-Layouts.pdf)
 - [Perguntas 3.2](Quiz_3_2.md)
-- [Desafio de codificação 2](#challenges/challenge_2) (brevemente disponível)
+- [Desafio de codificação 2](/challenges/challenge_2/)
 - Vídeo: [Compose - Estado](https://youtu.be/fR_o9v40Co4?si=yIcPEfjwDUBI29fN)
 - Slides usados no vídeo: [Compose-Estado.pdf](/slides/PDM_07_Compose-Estado.pdf)
 - [Perguntas 3.3](Quiz_3_3.md)
