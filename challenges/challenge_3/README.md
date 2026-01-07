@@ -9,8 +9,8 @@ O enfoque está na materialização do domínio na UI com Jetpack Compose e no u
 
 Objetivo pedagógico: familiarização com a construção de UIs reativas e gestão de estado local em Compose (sem ViewModel), articulando domínio simples e integração com intents implícitos.
 
-Guião: [guide.md]()  (brevemente disponível)
-Solução (tag): [challenge_3_solution]() (brevemente disponível)
+Guião: [guide.md]() (brevemente disponível)  
+Solução (tag): [challenge_3_solution]() (brevemente disponível)  
 
 #### Requisitos (o que deve ficar a funcionar):
 - Ecrã Jogo 
