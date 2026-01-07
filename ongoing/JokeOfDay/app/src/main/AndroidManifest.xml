@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/ic_tic_tac_toe"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_tic_tac_toe"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TicTacToe">
+        android:theme="@style/Theme.JokeOfDay">
         <activity
-            android:name=".main.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TicTacToe">
+            android:theme="@style/Theme.JokeOfDay">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".about.AboutActivity"
+            android:name=".AboutActivity"
             android:exported="false"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.TicTacToe" />
-        <activity
-            android:name=".game.GameActivity"
+            android:theme="@style/Theme.JokeOfDay">
+        </activity>
+
+        <activity android:name=".JokeActivity"
             android:exported="false"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.TicTacToe" />
+            android:theme="@style/Theme.JokeOfDay">
+        </activity>
     </application>
 
 </manifest>

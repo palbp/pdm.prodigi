@@ -4,7 +4,7 @@
 Um composable descreve estrutura, aspeto e áreas sensíveis a input do utilizador.
 
 2. A seguinte afirmação é verdadeira ou falsa?
-Os Modifiers aplicam-se cumulativamente e a ordem com se são aplicados é irrelevante para o resultado visual final.
+Os Modifiers aplicam-se cumulativamente e a ordem com que são aplicados é irrelevante para o resultado visual final.
   
 3. Qual afirmação que melhor descreve como a UI reage às mudanças nos dados em Jetpack Compose?
     - O programador deve solicitar explicitamente a recomposição sempre que os dados mudam.

@@ -1,25 +1,17 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 }
 
-kotlin {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_11)
-    }
-}
-
 android {
-    namespace = "prodigi.pdm.challenges.tictactoe"
+    namespace = "prodigi.pdm.ongoing.jokeofday"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "prodigi.pdm.challenges.tictactoe"
+        applicationId = "prodigi.pdm.ongoing.jokeofday"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -41,6 +33,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
     buildFeatures {
         compose = true
     }
@@ -55,8 +50,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.compose.material.icons.core)
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
