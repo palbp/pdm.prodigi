@@ -14,7 +14,7 @@ Nesta fase o enfoque está na definição da estrutura e do aspecto geral da UI.
 Objetivo pedagógico: familizarização com a construção de UIs usando Jetpack Compose. 
 
 Guião: [guide.md](guide.md)  
-Solução (tag): [challenge_2_solution](https://github.com/palbp/pdm.prodigi/tree/challenge_2_solution)
+Solução (tag): [challenge_2_solution](https://github.com/palbp/pdm.prodigi/tree/challenge_2_solution/challenges/solution)
 
 Notas acerca da solução apresentada: 
 - A solução apresentada inclui alguns elementos adicionais, nomeadamente:

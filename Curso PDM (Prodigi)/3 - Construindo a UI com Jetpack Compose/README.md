@@ -21,4 +21,4 @@
 - Vídeo: [Compose - Estado](https://youtu.be/fR_o9v40Co4?si=yIcPEfjwDUBI29fN)
 - Slides usados no vídeo: [Compose-Estado.pdf](/slides/PDM_07_Compose-Estado.pdf)
 - [Perguntas 3.3](Quiz_3_3.md)
-- [Desafio de codificação 3](#challenges/challenge_3) (brevemente disponível)
+- [Desafio de codificação 3](/challenges/challenge_3/)

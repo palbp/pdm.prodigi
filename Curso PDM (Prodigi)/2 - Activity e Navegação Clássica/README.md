@@ -11,4 +11,4 @@
 - Vídeo: [Activity](https://youtu.be/2DGGvxAqNj4?si=x0KiJxUcKFEkQncs)
 - Slides usados no vídeo: [Activity.pdf](/slides/PDM_04_Activity.pdf)
 - [Perguntas 2.1](Quiz_2_1.md)
-- [Desafio de codificação 1](#challenges/challenge_1)
+- [Desafio de codificação 1](/challenges/challenge_1)
