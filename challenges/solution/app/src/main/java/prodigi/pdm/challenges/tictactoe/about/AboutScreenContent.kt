@@ -3,6 +3,7 @@ package prodigi.pdm.challenges.tictactoe.about
 import android.net.Uri
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -11,6 +12,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Email
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -37,11 +41,15 @@ data class SocialInfo(val link: Uri, @param:DrawableRes val imageId: Int)
  * The content of the About screen.
  *
  * @param backRequested Callback to be invoked when the user requests to navigate back.
+ * @param onSendEmailRequested Callback to be invoked when the user requests to send an email
+ * @param onOpenUrlRequested Callback to be invoked when the user requests to open a URL.
  * @param socials The list of social media information to be displayed.
  */
 @Composable
 fun AboutScreenContent(
     backRequested: () -> Unit = { },
+    onSendEmailRequested: () -> Unit = { },
+    onOpenUrlRequested: (Uri) -> Unit = { },
     socials: Iterable<SocialInfo>,
 ) {
     TicTacToeTheme {
@@ -60,9 +68,9 @@ fun AboutScreenContent(
                     .padding(innerPadding)
                     .fillMaxSize(),
             ) {
-                Author()
+                Author(onSendEmailRequested)
                 Spacer(modifier = Modifier.height(80.dp))
-                Socials(socials = socials)
+                Socials(socials = socials, onOpenUrlRequested)
             }
         }
     }
@@ -70,30 +78,46 @@ fun AboutScreenContent(
 
 /**
  * Composable function to display the author's information.
+ * @param onSendEmailRequested Callback to be invoked when the user requests to send an email.
  */
 @Composable
-fun Author() {
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+fun Author(onSendEmailRequested: () -> Unit) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Image(
             painter = painterResource(id = R.drawable.ic_author),
             contentDescription = null,
             modifier = Modifier.sizeIn(100.dp, 100.dp, 200.dp, 200.dp)
         )
         Text(text = "Paulo Pereira", style = MaterialTheme.typography.bodyLarge)
+        Icon(
+            imageVector = Icons.Outlined.Email,
+            contentDescription = "Send Email",
+            modifier = Modifier.clickable { onSendEmailRequested() }
+        )
     }
 }
 
 /**
  * Composable function to display a list of social media icons.
  * @param socials An iterable collection of SocialInfo objects representing social media links and icons.
+ * @param onOpenUrlRequested Callback to be invoked when the user requests to open a URL.
  */
 @Composable
-fun Socials(socials: Iterable<SocialInfo>) {
+fun Socials(
+    socials: Iterable<SocialInfo>,
+    onOpenUrlRequested: (Uri) -> Unit = { }
+) {
     Column(
         modifier = Modifier.widthIn(min = 60.dp, max = 120.dp)
     ) {
         socials.forEach {
-            Social(id = it.imageId)
+            Social(
+                id = it.imageId,
+                uri = it.link,
+                onOpenUrlRequested = onOpenUrlRequested
+            )
             Spacer(modifier = Modifier.height(20.dp))
         }
     }
@@ -102,12 +126,19 @@ fun Socials(socials: Iterable<SocialInfo>) {
 /**
  * Composable function to display a social media icon.
  * @param id The drawable resource ID for the social media icon.
+ * @param uri The URI link to the social media profile.
+ * @param onOpenUrlRequested Callback to be invoked when the user requests to open the URL
  */
 @Composable
-fun Social(@DrawableRes id: Int) {
+fun Social(
+    @DrawableRes id: Int,
+    uri: Uri,
+    onOpenUrlRequested: (Uri) -> Unit
+) {
     Image(
         painter = painterResource(id = id),
         contentDescription = null,
+        modifier = Modifier.clickable {  onOpenUrlRequested(uri) }
     )
 }
 

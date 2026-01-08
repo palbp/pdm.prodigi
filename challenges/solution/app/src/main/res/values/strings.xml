@@ -5,6 +5,11 @@
     <string name="main_screen_play_button_text">Play</string>
 
     <string name="about_screen_title">About the author</string>
+    <string name="about_screen_no_suitable_app">Could not find a suitable application</string>
 
     <string name="game_screen_title">Game on</string>
+    <string name="game_screen_player_turn_message">Turn: %1$s</string>
+    <string name="game_screen_draw_message">It\'s a draw!</string>
+    <string name="game_screen_winner_message">%1$s wins!</string>
+    <string name="game_screen_restart_game_button_text">Restart</string>
 </resources>

@@ -19,6 +19,9 @@
       <SelectionState runConfigName="Tests in 'prodigi.pdm.challenges.tictactoe'">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="GameActivityTests">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
