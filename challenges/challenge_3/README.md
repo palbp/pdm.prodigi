@@ -9,7 +9,7 @@ O enfoque está na materialização do domínio na UI com Jetpack Compose e no u
 
 Objetivo pedagógico: familiarização com a construção de UIs reativas e gestão de estado local em Compose (sem ViewModel), articulando domínio simples e integração com intents implícitos.
 
-Guião: [guide.md](guide.md)
+Guião: [guide.md](guide.md)  
 Solução (tag): [challenge_3_solution](https://github.com/palbp/pdm.prodigi/tree/challenge_3_solution/challenges/solution)
 
 Acerca da solução apresentada, ela inclui:
