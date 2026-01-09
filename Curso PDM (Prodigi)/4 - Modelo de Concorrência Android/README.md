@@ -10,5 +10,5 @@
 
 ### Materiais
 - Vídeo: [Modelo de Concorrência](https://youtu.be/QShOCxQc6oI?si=N1_hNWdlTmFCpJ0m)
-- Slides usados no vídeo: [Compose-Introdução.pdf](/slides/PDM_08_Concorrência.pdf)
+- Slides usados no vídeo: [Modelo-Concorrência.pdf](/slides/PDM_08_Concorrência.pdf)
 - [Perguntas 4.1](Quiz_4_1.md)
