@@ -4,7 +4,7 @@
 
 1. Criar o projeto com suporte Compose e definir o Ecrã Inicial como LAUNCHER. Se necessário, revisite os vídeos relativos ao [ambiente de trabalho](https://youtu.be/phng-2MpWX0?si=0XeGiBGvjcmrzFDn) e à [anatomia de aplicações Android](https://youtu.be/mnXACtlAuM8?si=NljsMSoSaCnfOFfm).
 1. Adicionar as Activities "Sobre" e "Jogo" ao projeto. Use nomes apropriados (AboutActivity, GameActivity). Os nomes dos símbolos usados no código devem ser claros, coerentes e em inglês.
-1. Definir um Composable raiz por Activity (Inicial, Sobre, Jogo) e usá-lo em setContent.
+1. Definir o conteúdo de cada Activity (Inicial, Sobre, Jogo) especificando o conteúdo de setContent.
 1. Definir o conteúdo da `MainActivity` em Compose, usando o seguinte excerto de código como ponto de partida. Note-se que os botões ainda não promovem a navegação entre ecrãs (TODO):
    ```kotlin
    Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
