@@ -12,15 +12,15 @@ Guião: [guide.md](guide.md)
 Solução (tag): [challenge_4_solution](https://github.com/palbp/pdm.prodigi/tree/challenge_4_solution/challenges/solution)
 
 Acerca da solução apresentada, ela inclui:
-- Layout alternativos para o ecrã Jogo para as duas orientações do dispositivo, portrait (orientação vertical) e landscape (orientação horizontal);
+- Layouts alternativos para o ecrã Jogo para as duas orientações do dispositivo, portrait (orientação vertical) e landscape (orientação horizontal)
 
 #### Requisitos (o que deve ficar a funcionar):
 - Ecrã Jogo 
   - O estado atual do jogo é preservado quando existe mudança de configuração (ex.: rotação do ecrã);
 
 - Arquitetura da solução
-	- A solução inclui um ViewModel para o ecrã de jogo
-  - Nesse ecrã, os composables são stateless: recebem dados e emitem eventos; decisões tratadas no âmbito do ViewModel, que encaminha as acções realzadas na UI para os elementos de domínio..
+	- A solução inclui um ViewModel para o ecrã de jogo;
+  - Nesse ecrã, os composables são stateless: recebem dados e emitem eventos; decisões tratadas no âmbito do ViewModel, que encaminha as acções realzadas na UI para os elementos de domínio;
 
 - Modelo de domínio permanece inalterado face ao desafio anterior:
   - A lógica do jogo deve estar separada da UI;
@@ -33,4 +33,4 @@ Acerca da solução apresentada, ela inclui:
 - Estado é preservado na rotação do ecrã; 
 - ViewModel implementado para o ecrã Jogo;
 - Composables do ecrã Jogo são stateless;
-- Lógica do jogo permanece separada da UI;
+- Lógica do jogo permanece separada da UI,

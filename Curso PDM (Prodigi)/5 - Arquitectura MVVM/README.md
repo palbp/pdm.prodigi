@@ -17,4 +17,4 @@
 - Vídeo: [View Model](https://youtu.be/9vYmkeg72vg?si=NmT3coX858JG-Mul)
 - Slides usados no vídeo: [View Model.pdf](/slides/PDM_09_View_Model.pdf)
 - [Perguntas 5.1](Quiz_5_1.md)
-
+- [Desafio de codificação 4](/challenges/challenge_4/)
