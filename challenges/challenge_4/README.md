@@ -33,4 +33,4 @@ Acerca da solução apresentada, ela inclui:
 - Estado é preservado na rotação do ecrã; 
 - ViewModel implementado para o ecrã Jogo;
 - Composables do ecrã Jogo são stateless;
-- Lógica do jogo permanece separada da UI,
+- Lógica do jogo permanece separada da UI.

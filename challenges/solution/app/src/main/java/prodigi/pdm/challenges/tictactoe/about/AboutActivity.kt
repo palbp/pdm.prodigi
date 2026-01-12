@@ -95,7 +95,7 @@ private val authorSocials = listOf(
         imageId = R.drawable.ic_twitch
     ),
     SocialInfo(
-        link = "https://www.youtube.com/channel/UCetmdF6qGnMAdZP32i8AnbA".toUri(),
+        link = "https://www.youtube.com/@ProfPauloPereira".toUri(),
         imageId = R.drawable.ic_youtube
     )
 )

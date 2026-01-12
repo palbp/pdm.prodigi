@@ -4,7 +4,7 @@
 
 - Compreender o modelo de programação de Jetpack Compose
 - Descrever interfaces gráficas com Jetpack Compose usando composables elementares e layouts
-- Reagir a estímulos do utilizadpor através de eventos e estado
+- Reagir a estímulos do utilizador através de eventos e estado
 - Entender o ciclo de vida de composables e a recomposição automática
 - Distinguir “estado de apresentação” de “estado de aplicação” e gerar UI condicionalmente em função dos dados  
 - Aplicar _state hoisting_ para separar UI e comportamento

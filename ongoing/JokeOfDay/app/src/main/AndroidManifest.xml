@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JokeOfDay">
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.JokeOfDay">
@@ -23,12 +23,12 @@
         </activity>
 
         <activity
-            android:name=".AboutActivity"
+            android:name=".about.AboutActivity"
             android:exported="false"
             android:theme="@style/Theme.JokeOfDay">
         </activity>
 
-        <activity android:name=".JokeActivity"
+        <activity android:name=".joke.JokeActivity"
             android:exported="false"
             android:theme="@style/Theme.JokeOfDay">
         </activity>
