@@ -1,6 +1,6 @@
 # 3 - Construindo a UI com Jetpack Compose
 
-### Objectivos da Secção
+### Objetivos da Secção
 
 - Compreender o modelo de programação de Jetpack Compose
 - Descrever interfaces gráficas com Jetpack Compose usando composables elementares e layouts

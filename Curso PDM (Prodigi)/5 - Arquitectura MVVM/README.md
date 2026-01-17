@@ -1,6 +1,6 @@
 # 5 - Arquitectura MVVM (Model - View - ViewModel)
 
-### Objectivos da Secção
+### Objetivos da Secção
 
 - Compreender o padrão MVVM: papéis de View, ViewModel e Model
     - Dependências admissíveis (View → VM → Model);

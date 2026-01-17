@@ -1,6 +1,6 @@
 # 1 - Introdução
 
-### Objectivos da Secção
+### Objetivos da Secção
 
 - Preparar o ambiente de trabalho (Android Studio)
 - Entender a composição de um projecto Android

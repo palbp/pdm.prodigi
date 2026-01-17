@@ -1,6 +1,6 @@
 # 4 - Modelo de Concorrência Android
 
-### Objectivos da Secção
+### Objetivos da Secção
 
 - Compreender o modelo de execução em Android: Main/UI thread, fila de mensagens e execução sequencial de callbacks
 - Compreender o modelo de concorrência Android e o papel dos principais intervenientes: Threads, Coroutines, Dispatchers e Scopes

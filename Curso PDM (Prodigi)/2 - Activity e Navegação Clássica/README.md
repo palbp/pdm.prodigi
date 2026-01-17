@@ -1,6 +1,6 @@
 # 2 - Activity e Navegação Clássica
 
-### Objectivos da Secção
+### Objetivos da Secção
 
 - Compreender o papel da Activity como hospedeira da interface gráfica, adotando (neste curso) o modelo de uma Activity por ecrã.
 - Compreender o ciclo de vida da Activity e as implicações no modelo de programação (ex: reconfigurações)
