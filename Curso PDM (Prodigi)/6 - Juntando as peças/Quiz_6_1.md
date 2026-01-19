@@ -8,7 +8,7 @@
     - Permitem clientes heterogéneos (Android, iOS, Web, etc.).   
     - Obrigam a que cliente e servidor usem o mesmo stack tecnológico (ex. a mesma linguagem de programação e o mesmo conjunto de bibliotecas).  
 
-3. Considere o exemplo apresentado no [vídeo]() acerca do contrato que representa o acesso à Web API usada para obter piadas. Das seguintes afirmações, indique quais são verdadeiras (pode selecionar mais do que uma)
+3. Considere o exemplo apresentado no [vídeo](https://youtu.be/xwi9RsmN6uk?si=7uDRhNOaJa4D-xp4) acerca do contrato que representa o acesso à Web API usada para obter piadas. Das seguintes afirmações, indique quais são verdadeiras (pode selecionar mais do que uma)
     - A abstração `JokesService` modela o requisito de acesso e expõe as funções suspend necessárias.
     - A implementação concreta `IcanhazDadJokes` encapsula os detalhes de comunicação HTTP usando a biblioteca Ktor Client.
     - A função `fetchJoke` devolve um objeto do tipo `HttpResponse`.
