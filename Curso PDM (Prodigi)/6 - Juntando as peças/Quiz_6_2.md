@@ -1,21 +1,24 @@
-# Perguntas 5.1
+# Perguntas 6.2
 
 1. A seguinte afirmação é verdadeira ou falsa?
- Uma Activity pode assumir o papel de ViewModel no padrão MVVM sem desvantagens relevantes.
+No exemplo apresentado, a resolução de dependências é feita segundo o padrão Service Locator, usando a classe JokeOfDayApplication (subclasse de Application) como peça globalmente acessível.
 
-2. Considere o padrão MVVM. Das seguintes afirmações, indique quais são verdadeiras (pode selecionar mais do que uma)
-    - A View depende do ViewModel.
-    - O ViewModel mantém referência direta para a View de forma a atualizar o ecrã.
-    - O Model não depende do ViewModel (desacoplamento).
-    - O ViewModel não depende do Model.
-	- O fluxo de dados é Model → ViewModel → View.
-    - O fluxo de acções é View → ViewModel → Model.
+2. Acerca das dependências entre as peças do exemplo, indique quais as afirmações que são verdadeiras (pode selecionar mais do que uma):
+    - A MainActivity depende do Composable JokeOfDayScreen.
+    - A MainActivity depende da abstração JokeService.
+    - A MainActivity depende do view model JokeOfDayScreenViewModel.
+    - O Composable JokeOfDayScreen depende do view model JokeOfDayScreenViewModel.
+    - O Composable JokeOfDayScreen depende da abstração JokeService.
+    - O view model JokeOfDayScreenViewModel depende da abstração JokeService.
 
-3. Qual das seguintes peças sobrevive a uma reconfiguração?
-    - A Composição
-    - O ViewModel
-    - A Activity
-    - Nenhuma das anteriores
+3. No exemplo, onde é implementada a máquina de estados do ecrã?
+    - Nos composables individuais (IdleView, LoadingView, etc.).
+    - Na MainActivity.
+    - No ViewModel do ecrã.
+    - No serviço JokeService.
 
-4. A seguinte afirmação é verdadeira ou falsa?
-Corrotinas lançadas no viewModelScope são canceladas quando o ViewModel é destruído.
+4. Acerca da utilização da função lazy nas dependências produzidas pela instância de JokeOfDayApplication, indique quais as afirmações que são verdadeiras (pode selecionar mais do que uma):
+    - O primeiro acesso à propriedade jokeService (p.ex., ao criar o ViewModel) desencadeia a criação da instância concreta do serviço.
+    - Cada acesso a jokeService cria uma nova instância de IcanhazDadJokes.
+    - Se a propriedade jokeService não for acedida numa execução, nem IcanhazDadJokes nem o respetivo HttpClient chegam a ser instanciados.
+    - Todas as instâncias são criadas no arranque da aplicação, independentemente de quando são acedidas as propriedades que as publicam.

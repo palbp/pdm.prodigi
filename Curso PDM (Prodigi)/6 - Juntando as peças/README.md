@@ -14,7 +14,7 @@
 - Vídeo: [Comunicação HTTP](https://youtu.be/xwi9RsmN6uk?si=7uDRhNOaJa4D-xp4)
 - Slides usados no vídeo: [Comunicação HTTP.pdf](/slides/PDM_10_Comunicação_HTTP.pdf)
 - [Perguntas 6.1](Quiz_6_1.md)
-- Vídeo: [Juntando as peças]()
+- Vídeo: [Juntando as peças](https://youtu.be/9FSkqTGqaFo?si=T0_9quBEI2XJtW4t)
 - Slides usados no vídeo: [Juntando as peças.pdf](/slides/PDM_11_Juntando_tudo_1.pdf)
 - [Perguntas 6.2](Quiz_6_2.md)
 - [Desafio de codificação 5](/challenges/challenge_5/)
