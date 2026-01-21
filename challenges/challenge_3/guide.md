@@ -7,7 +7,7 @@
 2.	Modelo de domínio (primeira versão)
 	- Definir as estruturas de dados necessárias à representação do jogo: tabuleiro 3×3, jogador atual e estado da partida 
    (em curso / vitória / empate);
-   - As estruturas de dados são imutáveis (não é permitido o uso de var nas definições dos dados do jogo);
+    - As estruturas de dados são imutáveis (não é permitido o uso de var nas definições dos dados do jogo);
 3. Apresentação do estado do jogo no ecrã Jogo
    - Definir o contrato de dados e eventos do ecrã Jogo, ou seja, os parâmetros do composable raiz do ecrã Jogo;
    - Implementar a visualização do tabuleiro 3×3 e da informação do jogo (vez do jogador, vitória, empate) conforme o recebido como parâmetro no composable raiz do ecrã Jogo;
