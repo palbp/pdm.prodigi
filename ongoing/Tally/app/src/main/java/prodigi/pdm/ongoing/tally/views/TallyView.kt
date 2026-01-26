@@ -1,6 +1,5 @@
-package prodigi.pdm.ongoing.tally
+package prodigi.pdm.ongoing.tally.views
 
-import android.widget.Button
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row

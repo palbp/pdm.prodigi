@@ -1,4 +1,4 @@
-package prodigi.pdm.ongoing.tally
+package prodigi.pdm.ongoing.tally.views
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -6,19 +6,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import prodigi.pdm.ongoing.tally.domain.TallyCounter
 
 @Composable
-fun TallyAtMinView(
+fun TallyAtCapacityView(
     counter: TallyCounter,
-    onIncrement: () -> Unit,
+    onDecrement: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    TallyView(counter, onIncrement = onIncrement, modifier = modifier)
+    TallyView(counter, onDecrement = onDecrement, modifier = modifier)
 }
 
 @Preview
 @Composable
-fun TallyAtMinViewPreview() {
-    TallyAtMinView(
+fun TallyAtCapacityViewPreview() {
+    TallyAtCapacityView(
         counter = TallyCounter(0),
-        onIncrement = { }
+        onDecrement = { }
     )
 }

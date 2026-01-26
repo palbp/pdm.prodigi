@@ -1,4 +1,4 @@
-package prodigi.pdm.ongoing.tally
+package prodigi.pdm.ongoing.tally.views
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
