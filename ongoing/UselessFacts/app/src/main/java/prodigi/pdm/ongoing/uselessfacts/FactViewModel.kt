@@ -1,12 +1,12 @@
-package prodigi.pdm.ongoing.uselessfacts.ui
+package prodigi.pdm.ongoing.uselessfacts
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import prodigi.pdm.ongoing.uselessfacts.UselessFactService
 
 /**
  * Represents the possible UI states for the useless fact screen.
@@ -15,7 +15,7 @@ sealed interface FactUiState {
     /**
      * Idle state: No loading is in progress. Displays the current fact if available.
      */
-    data class Idle(val fact: prodigi.pdm.ongoing.uselessfacts.UselessFact?) : FactUiState
+    data class Idle(val fact: UselessFact?) : FactUiState
     /**
      * Loading state: A fact is being fetched from the service.
      */
@@ -69,5 +69,21 @@ class FactViewModel(
                 state = FactUiState.Error(e.message ?: "Unknown error")
             }
         }
+    }
+
+    companion object {
+        /**
+         * Returns a [ViewModelProvider.Factory] that provides [FactViewModel] with the given [UselessFactService].
+         */
+        fun factory(service: UselessFactService): ViewModelProvider.Factory =
+            object : ViewModelProvider.Factory {
+                override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                    if (modelClass.isAssignableFrom(FactViewModel::class.java)) {
+                        @Suppress("UNCHECKED_CAST")
+                        return FactViewModel(service) as T
+                    }
+                    throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
+                }
+            }
     }
 }

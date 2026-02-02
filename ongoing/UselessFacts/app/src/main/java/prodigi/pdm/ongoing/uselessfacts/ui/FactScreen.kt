@@ -1,3 +1,10 @@
+/*
+ * FactScreen.kt
+ *
+ * This file contains the composable for displaying the useless fact screen, which presents different views based on the current UI state (Idle, Loading, Error).
+ * The screen also provides a button to request a new fact. State hoisting is used, so the service is not passed directly to the composable.
+ */
+
 package prodigi.pdm.ongoing.uselessfacts.ui
 
 import androidx.compose.foundation.layout.*
@@ -9,8 +16,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.style.TextAlign
+import prodigi.pdm.ongoing.uselessfacts.FactUiState
 import prodigi.pdm.ongoing.uselessfacts.UselessFact
 
+/**
+ * Displays the useless fact screen, showing different views depending on the current [prodigi.pdm.ongoing.uselessfacts.FactUiState].
+ * - Idle: Shows the fact if available, or a placeholder message.
+ * - Loading: Shows a progress indicator.
+ * - Error: Shows an error message.
+ *
+ * @param state The current UI state for the screen.
+ * @param onRequestNextFact Callback to request a new fact.
+ * @param modifier Modifier for styling.
+ */
 @Composable
 fun FactScreen(
     state: FactUiState,
@@ -48,11 +66,19 @@ fun FactScreen(
     }
 }
 
+/**
+ * Displays a loading indicator while a fact is being fetched.
+ */
 @Composable
 private fun LoadingFactView() {
     CircularProgressIndicator()
 }
 
+/**
+ * Displays an error message when a fact cannot be fetched.
+ *
+ * @param message The error message to display.
+ */
 @Composable
 private fun ErrorFactView(message: String) {
     Card(
@@ -70,6 +96,11 @@ private fun ErrorFactView(message: String) {
     }
 }
 
+/**
+ * Displays the useless fact if available, or a placeholder message if not.
+ *
+ * @param fact The [UselessFact] to display, or null if not available.
+ */
 @Composable
 private fun IdleFactView(fact: UselessFact?) {
     if (fact != null) {
